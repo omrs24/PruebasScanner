@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebasScanner.Views.AboutPage"
+             xmlns:vm="clr-namespace:PruebasScanner.ViewModels"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+              Shell.TabBarIsVisible="False" Shell.NavBarIsVisible="False">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!-- <ContentPage.ToolbarItems>
+        <ToolbarItem />
+        <ToolbarItem />
+    </ContentPage.ToolbarItems>-->
+
+    <StackLayout Orientation="Horizontal">
+
+        <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical" HorizontalOptions="Center" Padding="10" Margin="30,20">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <ImageButton Clicked="btnScan_Clicked" Source="barcode" x:Name="btnScan" HeightRequest="100"
+                         BackgroundColor="Transparent" Padding="0,0,0,10" Visual="Material"
+                         Grid.Row="0" Grid.Column="0"></ImageButton>
+                <ImageButton Clicked="btnPrinter_Clicked" Source="printer" x:Name="btnPrinter" HeightRequest="100"
+                         BackgroundColor="Transparent" Padding="10,0,0,0"
+                         Grid.Row="0" Grid.Column="1"></ImageButton>
+                
+                <ImageButton Clicked="btnCsvFile_Clicked" Source="share" x:Name="btnCsvFile" HeightRequest="100"
+                         BackgroundColor="Transparent" Padding="10,0,0,0"
+                         Grid.Row="1" Grid.Column="0"></ImageButton>
+                <ImageButton Clicked="btnDeleteFile_Clicked" Source="delete" x:Name="btnDeleteFile" HeightRequest="100"
+                         BackgroundColor="Transparent" Padding="10,0,0,0"
+                         Grid.Row="1" Grid.Column="1"></ImageButton>
+                
+            </Grid>
+            
+        </StackLayout>
+        
+        
+        <StackLayout  VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
+
+            <ScrollView>
+                <StackLayout>
+                    
+                    <yummy:PancakeView  BackgroundColor="White" Margin="0" CornerRadius="0" Padding="0" HeightRequest="176" x:Name="pancakeCard">
+                        <yummy:PancakeView.Border>
+                            <yummy:Border Color="Transparent" Thickness="2" />
+                        </yummy:PancakeView.Border>
+                        <!--<yummy:PancakeView.Shadow>
+                            <yummy:DropShadow Color="#000000" Offset="10,10" />
+                        </yummy:PancakeView.Shadow>-->
+
+                        <StackLayout WidthRequest="560" HeightRequest="176">
+                            <!-- Header -->
+                            <yummy:PancakeView CornerRadius="0" BackgroundColor="Black" Padding="0" HeightRequest="50">
+                                <Label x:Name="lblTitle" Text="Comida Asistentes 2024" HorizontalOptions="Center" TextColor="White" 
+                                       FontSize="30" FontAttributes="Bold" Margin="0,5"></Label>
+                            </yummy:PancakeView>
+
+                            <!-- Body -->
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="63" />
+                                    <RowDefinition Height="63" />
+                                </Grid.RowDefinitions>
+
+                                <Label x:Name="lblName" HorizontalTextAlignment="Center" 
+                                       TextColor="Black" Grid.Row="0" Padding="0" HeightRequest="63" Text="" FontAttributes="Bold" FontFamily="Lobster-Regular"
+                                       FontSize="30"></Label>
+
+                                <Label x:Name="lblEmail" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black" Grid.Row="2"
+                                Padding="0" HeightRequest="50" Text="Correo" FontAttributes="Bold" FontSize="35" IsVisible="False" ></Label>
+
+                                <Label x:Name="lblCompany" HorizontalTextAlignment="Center" 
+                                       TextColor="Black" Grid.Row="1" Padding="0" HeightRequest="63" Text="" FontAttributes="Bold"
+                                       FontSize="30"></Label>
+
+
+                            </Grid>
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <!-- Frame principal de gafete-->
+                    <Frame IsVisible="false" BackgroundColor="Transparent" BorderColor="Gray" CornerRadius="20" Padding="0" HasShadow="True" x:Name="uCard">
+
+                        <StackLayout >
+                            <!-- Header -->
+                            <Frame CornerRadius="0" BackgroundColor="#223B6F" Padding="0">
+                                <Image Source="logo_somus" WidthRequest="100"></Image>
+                            </Frame>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60" />
+                                    <RowDefinition Height="80" />
+                                    <RowDefinition Height="180" />
+                                    <RowDefinition Height="60" />
+                                </Grid.RowDefinitions>
+
+                                <Label x:Name="lblInvitados" Text="INVITADO" Grid.Row="0" HorizontalOptions="Center"
+                               FontSize="50" TextColor="Black" FontAttributes="Bold" ></Label>
+
+                                <!--<Image VerticalOptions="FillAndExpand" Grid.Row="1"
+                            MinimumHeightRequest="400" Margin="20,0"
+                            MinimumWidthRequest="400" Source="logo_somus1"
+                            x:Name="imgSS"></Image>-->
+
+
+                                <Label x:Name="lblName1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black" Grid.Row="2"
+                                    Padding="0" HeightRequest="50" Text="Nombre" FontAttributes="Bold" FontSize="40" ></Label>
+
+                                <Label x:Name="lblEmail1" HorizontalOptions="Center" TextColor="Black" Grid.Row="2"
+                                    Padding="0" HeightRequest="50" Text="Correo" FontAttributes="Bold" FontSize="35" IsVisible="False"></Label>
+
+                                <Label x:Name="lblCompany1" HorizontalOptions="Center" TextColor="Black" Grid.Row="3"
+                                    Padding="0" HeightRequest="50" Text="Compañia" FontAttributes="Bold" FontSize="35" ></Label>
+
+
+                            </Grid>
+
+                            <Frame CornerRadius="0" BackgroundColor="#223B6F" HeightRequest="70" Padding="0"></Frame>
+
+                        </StackLayout>
+
+
+                    </Frame>
+
+                </StackLayout>
+
+
+
+            </ScrollView>
+
+        </StackLayout>
+
+        <!--<ScrollView>
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Image VerticalOptions="FillAndExpand"
+                    MinimumHeightRequest="400"
+                    MinimumWidthRequest="400"
+                    x:Name="imgSS"></Image>
+            </StackLayout>
+        </ScrollView>-->
+    </StackLayout>
+
+</ContentPage>

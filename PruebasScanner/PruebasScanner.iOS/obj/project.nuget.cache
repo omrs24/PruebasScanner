@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "qx6DuIv95Yp6KWnAbcEo8aRJ8/0p7TVZaYIw0zt64GOk7fEfGvSx9Oe3XjosrIYkU6Rmp0MmuobW4JM92EnTDg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\orosales\\source\\repos\\PruebasScanner\\PruebasScanner\\PruebasScanner.iOS\\PruebasScanner.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\orosales\\.nuget\\packages\\imagefromxamarinui\\1.0.0\\imagefromxamarinui.1.0.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\xamarin.forms.saveopenpdfpackage\\1.0.0\\xamarin.forms.saveopenpdfpackage.1.0.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

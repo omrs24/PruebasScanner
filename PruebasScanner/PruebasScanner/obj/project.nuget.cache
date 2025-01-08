@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "M75cyCqRCQB2K6nqv0M8KfZCvUhBPMD5ys8kN2O4r66UOgxBnZ4tVKzi9EmzAUOitw1bIEl9+rJoR702S+/jeQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\orosales\\source\\repos\\PruebasScanner\\PruebasScanner\\PruebasScanner\\PruebasScanner.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\orosales\\.nuget\\packages\\imagefromxamarinui\\1.0.0\\imagefromxamarinui.1.0.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\xamarin.forms.saveopenpdfpackage\\1.0.0\\xamarin.forms.saveopenpdfpackage.1.0.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}
