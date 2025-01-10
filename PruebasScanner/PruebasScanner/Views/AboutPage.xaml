@@ -23,7 +23,7 @@
 
     <StackLayout Orientation="Horizontal">
 
-        <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical" HorizontalOptions="Center" Padding="10" Margin="30,20">
+        <StackLayout  VerticalOptions="CenterAndExpand" Orientation="Vertical" HorizontalOptions="Center" Padding="10" Margin="30,20">
             <Grid >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="150" />

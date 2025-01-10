@@ -12,6 +12,8 @@ using ZXing.Mobile;
 using ImageFromXamarinUI;
 using PruebasScanner.Models;
 using System.Threading;
+using System.Net.Http.Headers;
+using PruebasScanner.HttpHandlers;
 
 namespace PruebasScanner.Views
 {
@@ -58,71 +60,76 @@ namespace PruebasScanner.Views
             var msg = "No se completo el escaneo";
             if (result != null)
             {
-                //int count =  ;
-                string[] splResult = new string[3];
-                splResult = result.Text.Split('|');
+                //Obtener valor escaneado
 
-                #region "Validacion Correos Validos"
-                Correos correo = new Correos();
-                //var listItem = correo.listCorreos.Find(x => x.ToString() == splResult[1].ToLower());
+                int id = Convert.ToInt32(result.ToString());
 
-                var listMarca = correo.listCorreosMarca.Find(x => x.ToString() == splResult[1].ToLower());
+                getData(id);
 
-                if (listMarca == null)
-                {
-                    lblTitle.Text = "Comida Reaseguradores 2024";
-                }
-                else
-                {
-                    lblTitle.Text = $"*** Comida Reaseguradores 2024 ***";
-                }
-                /*if (listItem == null)
-                {
-                    DisplayAlert("Error", $"Correo no encontrado en la lista de invitaciones { splResult[1].ToLower() } .", "Ok");
-                    return;
-                }
-                else
-                {
-                    
-                }*/
-                #endregion
+                //string[] splResult = new string[3];
+                //splResult = result.Text.Split('|');
 
-                #region "Validacion Nombres Cortos"
+                //#region "Validacion Correos Validos"
+                //Correos correo = new Correos();
+                ////var listItem = correo.listCorreos.Find(x => x.ToString() == splResult[1].ToLower());
 
-                EmpresasCorto emp = new EmpresasCorto();
+                //var listMarca = correo.listCorreosMarca.Find(x => x.ToString() == splResult[1].ToLower());
 
-                /*if (emp.empresas.ContainsKey(splResult[2].ToUpper()))
-                {
-                    lblCompany.Text = emp.empresas[splResult[2].ToUpper()];
-                    lblCompany.FontSize = 25;
-                }
-                else
-                {*/
-                    if (splResult[2].Length > 40)
-                    {
-                        lblCompany.Text = splResult[2].Substring(0, 40).ToUpper();
-                        lblCompany.FontSize = 20;
-                    }
-                    else
-                    {
-                        lblCompany.Text = splResult[2].ToUpper();
-                        lblCompany.FontSize = 25;
-                    }
+                //if (listMarca == null)
+                //{
+                //    lblTitle.Text = "Comida Reaseguradores 2024";
                 //}
+                //else
+                //{
+                //    lblTitle.Text = $"*** Comida Reaseguradores 2024 ***";
+                //}
+                ///*if (listItem == null)
+                //{
+                //    DisplayAlert("Error", $"Correo no encontrado en la lista de invitaciones { splResult[1].ToLower() } .", "Ok");
+                //    return;
+                //}
+                //else
+                //{
+                    
+                //}*/
+                //#endregion
 
-                #endregion
+                //#region "Validacion Nombres Cortos"
 
-                //lenamos el cuadro de busqueda con el codigo escaneado
-                lblName.Text = splResult[0].ToUpper();
-                if (splResult[0].Length > 30)
-                {
-                    lblName.FontSize = 25;
-                }
-                else
-                {
-                    lblName.FontSize = 30;
-                }
-                lblEmail.Text = splResult[1].ToUpper();                    
+                //EmpresasCorto emp = new EmpresasCorto();
+
+                ///*if (emp.empresas.ContainsKey(splResult[2].ToUpper()))
+                //{
+                //    lblCompany.Text = emp.empresas[splResult[2].ToUpper()];
+                //    lblCompany.FontSize = 25;
+                //}
+                //else
+                //{*/
+                //    if (splResult[2].Length > 40)
+                //    {
+                //        lblCompany.Text = splResult[2].Substring(0, 40).ToUpper();
+                //        lblCompany.FontSize = 20;
+                //    }
+                //    else
+                //    {
+                //        lblCompany.Text = splResult[2].ToUpper();
+                //        lblCompany.FontSize = 25;
+                //    }
+                ////}
+
+                //#endregion
+
+                ////lenamos el cuadro de busqueda con el codigo escaneado
+                //lblName.Text = splResult[0].ToUpper();
+                //if (splResult[0].Length > 30)
+                //{
+                //    lblName.FontSize = 25;
+                //}
+                //else
+                //{
+                //    lblName.FontSize = 30;
+                //}
+                //lblEmail.Text = splResult[1].ToUpper();                    
 
             }
             else
@@ -372,6 +379,48 @@ namespace PruebasScanner.Views
             catch (Exception ex)
             {
                 await DisplayAlert("Error al borrar el archivo", $"Intente mas tarde. \n { ex.ToString() }", "Ok");
+            }            
+        }
+
+        private async void getData(int id)
+        {
+            try
+            {
+                //var handler = new CustomHttpClientHandler();
+                using (HttpClient client = new HttpClient())
+                {
+
+                    var token = "1|0fbx5w5y0POvZ6j9Ue7WLKZi4Ru3M2MwftIP2cwhc1be544a";
+
+                    var authHeader = new AuthenticationHeaderValue("Bearer", token);
+
+                    client.DefaultRequestHeaders.Authorization = authHeader;
+                    client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", "application/json");
+                    client.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "application/json");
+                    var response = client.GetAsync("https://comida-reaseguradores.som.us/SomusEventos/api/forms/" + id.ToString()).Result;
+
+                    //string content = response.Content.ReadAsStringAsync().Result;
+                    string content2;
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        content2 = await response.Content.ReadAsStringAsync();
+
+                        await DisplayAlert("error", content2, "ok");
+                        return;
+                    }
+
+                    content2 = await response.Content.ReadAsStringAsync();
+
+                    //var Items = JsonConvert.DeserializeObject<Mensajes>(content2);
+                    await DisplayAlert("Resultado", content2, "Ok");
+                    //Debug.WriteLine(content);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("error", $"Intente mas tarde. \n { ex.ToString() }", "ok");
             }
             
         }

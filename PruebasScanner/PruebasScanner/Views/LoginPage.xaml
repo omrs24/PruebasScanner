@@ -1,14 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              x:Class="PruebasScanner.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
-    <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
-        </StackLayout>
-    </ContentPage.Content>
+             xmlns:vm="clr-namespace:PruebasScanner.ViewModels"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <StackLayout VerticalOptions="Center" BackgroundColor="Green" >
+        <Grid Margin="70,0" BackgroundColor="Red">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="txtCorreo" Placeholder="correo" 
+                   PlaceholderColor="#c9c9c9" TextColor="Black" 
+                   HeightRequest="20" Margin="0,50,0,0" HorizontalTextAlignment="Center"
+                   Grid.Row="0" Grid.Column="0" ></Entry>
+
+            <Entry x:Name="txtPass" Placeholder="contraseña" 
+                   PlaceholderColor="#c9c9c9" TextColor="Black" 
+                   HeightRequest="20" Margin="0,0,0,50" HorizontalTextAlignment="Center"
+                   Grid.Row="1" Grid.Column="0"></Entry>
+
+            <Button VerticalOptions="CenterAndExpand" Text="Login" Command="{Binding LoginCommand}" Margin="20"
+                    Grid.Row="2" Grid.Column="0">
+                <Button.CommandParameter 
+            </Button>
+
+            <!--<ImageButton Clicked="btnScan_Clicked" Source="barcode" x:Name="btnScan" HeightRequest="100"
+                         BackgroundColor="Transparent" Padding="0,0,0,10" Visual="Material"
+                         Grid.Row="0" Grid.Column="0"></ImageButton>
+            <ImageButton Clicked="btnPrinter_Clicked" Source="printer" x:Name="btnPrinter" HeightRequest="100"
+                         BackgroundColor="Transparent" Padding="10,0,0,0"
+                         Grid.Row="0" Grid.Column="1"></ImageButton>
+
+            <ImageButton Clicked="btnCsvFile_Clicked" Source="share" x:Name="btnCsvFile" HeightRequest="100"
+                         BackgroundColor="Transparent" Padding="10,0,0,0"
+                         Grid.Row="1" Grid.Column="0"></ImageButton>
+            <ImageButton Clicked="btnDeleteFile_Clicked" Source="delete" x:Name="btnDeleteFile" HeightRequest="100"
+                         BackgroundColor="Transparent" Padding="10,0,0,0"
+                         Grid.Row="1" Grid.Column="1"></ImageButton>-->
+
+        </Grid>
+    </StackLayout>
+    
 </ContentPage>
