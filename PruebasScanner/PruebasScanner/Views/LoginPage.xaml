@@ -6,6 +6,10 @@
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              >
 
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
@@ -27,17 +31,17 @@
             <Entry x:Name="txtCorreo" Placeholder="correo" 
                    PlaceholderColor="#c9c9c9" TextColor="Black" 
                    HeightRequest="20" Margin="0,50,0,0" HorizontalTextAlignment="Center"
-                   Grid.Row="0" Grid.Column="0" ></Entry>
+                   Keyboard="Email"
+                   Grid.Row="0" Grid.Column="0" Text="{Binding Email}"></Entry>
 
             <Entry x:Name="txtPass" Placeholder="contraseña" 
                    PlaceholderColor="#c9c9c9" TextColor="Black" 
                    HeightRequest="20" Margin="0,0,0,50" HorizontalTextAlignment="Center"
-                   Grid.Row="1" Grid.Column="0"></Entry>
+                   IsPassword="True"
+                   Grid.Row="1" Grid.Column="0" Text="{Binding Password}"></Entry>
 
             <Button VerticalOptions="CenterAndExpand" Text="Login" Command="{Binding LoginCommand}" Margin="20"
-                    Grid.Row="2" Grid.Column="0">
-                <Button.CommandParameter 
-            </Button>
+                    Grid.Row="2" Grid.Column="0" />
 
             <!--<ImageButton Clicked="btnScan_Clicked" Source="barcode" x:Name="btnScan" HeightRequest="100"
                          BackgroundColor="Transparent" Padding="0,0,0,10" Visual="Material"

@@ -14,8 +14,20 @@ namespace PruebasScanner.Views
     {
         public LoginPage()
         {
+            var vm = new LoginViewModel();
+
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            this.BindingContext = vm;
+            vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Intente de nuevo", "OK");
+            txtCorreo.Completed += (object sender, EventArgs e) =>
+            {
+                txtPass.Focus();
+            };
+
+            txtPass.Completed += (object sender, EventArgs e) =>
+            {
+                vm.LoginCommand.Execute(null);
+            };
         }
     }
 }

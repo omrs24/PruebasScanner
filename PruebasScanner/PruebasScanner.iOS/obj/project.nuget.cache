@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qx6DuIv95Yp6KWnAbcEo8aRJ8/0p7TVZaYIw0zt64GOk7fEfGvSx9Oe3XjosrIYkU6Rmp0MmuobW4JM92EnTDg==",
+  "dgSpecHash": "PjNUH3MzUh0SihLhbFW7KbIsUJb8LvjVdGCTMAbA9qSl54s+3eWBNgRPb6TddcOomb1SVyIZpqb/DUdB+GZcSw==",
   "success": true,
   "projectFilePath": "C:\\Users\\orosales\\source\\repos\\PruebasScanner\\PruebasScanner\\PruebasScanner.iOS\\PruebasScanner.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\orosales\\.nuget\\packages\\imagefromxamarinui\\1.0.0\\imagefromxamarinui.1.0.0.nupkg.sha512",
+    "C:\\Users\\orosales\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\orosales\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\orosales\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",

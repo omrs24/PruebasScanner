@@ -6,6 +6,7 @@ public class MonoPackageManager_Resources {
 		"FastAndroidCamera.dll",
 		"FormsViewGroup.dll",
 		"ImageFromXamarinUI.dll",
+		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.XamarinFormsSaveOpenPDFPackage.dll",
 		"PruebasScanner.dll",

@@ -657,8 +657,9 @@ C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Andr
 C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\jl\55fbf728-f47c-48c6-b9e1-979af95ee9cc.jar
-C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\proguard\035af440-5dfe-4909-a175-1f7e26b44c9c.txt
-C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\proguard\5bfc402a-5bde-46cd-8f6b-f09a8ca5bb78.txt
-C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\proguard\99acc033-ed05-4d9b-9a8a-c21a8c7e2636.cfg
-C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\proguard\f2c2ab0d-c364-4e91-8c7a-b2322986a87a.txt
+C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\android\assets\Newtonsoft.Json.dll
+C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\jl\5f0adac2-e83b-4314-9ffb-c890e9f7ac79.jar
+C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\proguard\1938e275-e39a-4cf8-be74-61545767a4ca.txt
+C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\proguard\1ac4b940-3541-4449-920d-a62ba4493534.cfg
+C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\proguard\37d2aebc-ed8c-471a-9cee-2d43e5b4504e.txt
+C:\Users\orosales\source\repos\PruebasScanner\PruebasScanner\PruebasScanner.Android\obj\Debug\110\androidx\proguard\85ae8c8d-9248-4247-aa79-d79c2bb54e2d.txt
