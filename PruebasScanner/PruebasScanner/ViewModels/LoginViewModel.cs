@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using PruebasScanner.Models;
 using PruebasScanner.Views;
 using System;
 using System.Collections.Generic;
@@ -69,8 +70,13 @@ namespace PruebasScanner.ViewModels
                     if (result.IsSuccessStatusCode)
                     {
                         content2 = await result.Content.ReadAsStringAsync();
+                        var info = JsonConvert.DeserializeObject<Form>(content2);
                         Console.WriteLine(content2);
-                        //await DisplayAlert("error", content2, "ok");
+
+                        //MessagingCenter.Send(this, "UserLoggedIn", content);
+
+                        Application.Current.Properties["token"] = info.token;
+
                         await Shell.Current.GoToAsync($"{nameof(AboutPage)}");
                         return;
                     }

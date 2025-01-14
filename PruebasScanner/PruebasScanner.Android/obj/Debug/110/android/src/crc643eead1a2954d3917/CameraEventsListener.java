@@ -22,8 +22,9 @@ public class CameraEventsListener
 	public CameraEventsListener ()
 	{
 		super ();
-		if (getClass () == CameraEventsListener.class)
+		if (getClass () == CameraEventsListener.class) {
 			mono.android.TypeManager.Activate ("ZXing.Mobile.CameraAccess.CameraEventsListener, ZXingNetMobile", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

@@ -23,16 +23,18 @@ public class ZxingActivity
 	public ZxingActivity ()
 	{
 		super ();
-		if (getClass () == ZxingActivity.class)
+		if (getClass () == ZxingActivity.class) {
 			mono.android.TypeManager.Activate ("ZXing.Mobile.ZxingActivity, ZXingNetMobile", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 
 	public ZxingActivity (int p0)
 	{
 		super (p0);
-		if (getClass () == ZxingActivity.class)
+		if (getClass () == ZxingActivity.class) {
 			mono.android.TypeManager.Activate ("ZXing.Mobile.ZxingActivity, ZXingNetMobile", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 

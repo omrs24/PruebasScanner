@@ -19,32 +19,36 @@ public class ZxingOverlayView
 	public ZxingOverlayView (android.content.Context p0)
 	{
 		super (p0);
-		if (getClass () == ZxingOverlayView.class)
+		if (getClass () == ZxingOverlayView.class) {
 			mono.android.TypeManager.Activate ("ZXing.Mobile.ZxingOverlayView, ZXingNetMobile", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 
 	public ZxingOverlayView (android.content.Context p0, android.util.AttributeSet p1)
 	{
 		super (p0, p1);
-		if (getClass () == ZxingOverlayView.class)
+		if (getClass () == ZxingOverlayView.class) {
 			mono.android.TypeManager.Activate ("ZXing.Mobile.ZxingOverlayView, ZXingNetMobile", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+		}
 	}
 
 
 	public ZxingOverlayView (android.content.Context p0, android.util.AttributeSet p1, int p2)
 	{
 		super (p0, p1, p2);
-		if (getClass () == ZxingOverlayView.class)
+		if (getClass () == ZxingOverlayView.class) {
 			mono.android.TypeManager.Activate ("ZXing.Mobile.ZxingOverlayView, ZXingNetMobile", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2 });
+		}
 	}
 
 
 	public ZxingOverlayView (android.content.Context p0, android.util.AttributeSet p1, int p2, int p3)
 	{
 		super (p0, p1, p2, p3);
-		if (getClass () == ZxingOverlayView.class)
+		if (getClass () == ZxingOverlayView.class) {
 			mono.android.TypeManager.Activate ("ZXing.Mobile.ZxingOverlayView, ZXingNetMobile", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2, p3 });
+		}
 	}
 
 

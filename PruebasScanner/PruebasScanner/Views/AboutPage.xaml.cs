@@ -14,23 +14,40 @@ using PruebasScanner.Models;
 using System.Threading;
 using System.Net.Http.Headers;
 using PruebasScanner.HttpHandlers;
+using PruebasScanner.ViewModels;
+using Newtonsoft.Json;
 
 namespace PruebasScanner.Views
 {
     public partial class AboutPage : ContentPage
     {
+        public string token;
         public AboutPage()
         {
             InitializeComponent();
 
             this.Title = "";
+
+            token = Application.Current.Properties["token"].ToString();
+
+            //MessagingCenter.Subscribe<LoginViewModel, Form>(this, "UserLoggedIn", (sender, user) =>
+            //{
+            //    Console.WriteLine($"Token: {user}");
+            //    token = user.token;
+            //});
+        }
+
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            MessagingCenter.Send(this, "allowLandScape");
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            //  Para prevenir que la imagen tomada se intente abrir despues de regresar a la pagina
-            //imgSS.Source = null;
+            MessagingCenter.Send(this, "quitLandScape");
         }
 
         async void btnScan_Clicked(object sender, EventArgs e)
@@ -140,6 +157,9 @@ namespace PruebasScanner.Views
 
         async void btnPrinter_Clicked(object sender, EventArgs e)
         {
+            await DisplayAlert("Token", token, "ok");
+            return;
+
             /*btnScan.IsVisible = false;
             btnPrinter.IsVisible = false;*/
 
@@ -389,9 +409,6 @@ namespace PruebasScanner.Views
                 //var handler = new CustomHttpClientHandler();
                 using (HttpClient client = new HttpClient())
                 {
-
-                    var token = "1|0fbx5w5y0POvZ6j9Ue7WLKZi4Ru3M2MwftIP2cwhc1be544a";
-
                     var authHeader = new AuthenticationHeaderValue("Bearer", token);
 
                     client.DefaultRequestHeaders.Authorization = authHeader;
@@ -404,8 +421,9 @@ namespace PruebasScanner.Views
                     if (!response.IsSuccessStatusCode)
                     {
                         content2 = await response.Content.ReadAsStringAsync();
+                        Form user = JsonConvert.DeserializeObject<Form>(content2);
 
-                        await DisplayAlert("error", content2, "ok");
+                        await DisplayAlert("error", user.name, "ok");
                         return;
                     }
 

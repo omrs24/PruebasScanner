@@ -20,15 +20,17 @@ public class CustomPrintDocumentAdapter
 	public CustomPrintDocumentAdapter ()
 	{
 		super ();
-		if (getClass () == CustomPrintDocumentAdapter.class)
+		if (getClass () == CustomPrintDocumentAdapter.class) {
 			mono.android.TypeManager.Activate ("PruebasScanner.Droid.Adapters.CustomPrintDocumentAdapter, PruebasScanner.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	public CustomPrintDocumentAdapter (java.lang.String p0)
 	{
 		super ();
-		if (getClass () == CustomPrintDocumentAdapter.class)
+		if (getClass () == CustomPrintDocumentAdapter.class) {
 			mono.android.TypeManager.Activate ("PruebasScanner.Droid.Adapters.CustomPrintDocumentAdapter, PruebasScanner.Android", "System.String, mscorlib", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 

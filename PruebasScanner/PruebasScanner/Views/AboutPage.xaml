@@ -4,7 +4,7 @@
              x:Class="PruebasScanner.Views.AboutPage"
              xmlns:vm="clr-namespace:PruebasScanner.ViewModels"
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-              Shell.TabBarIsVisible="False" Shell.NavBarIsVisible="False">
+              Shell.TabBarIsVisible="False" Shell.NavBarIsVisible="True">
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -16,10 +16,10 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <!-- <ContentPage.ToolbarItems>
-        <ToolbarItem />
-        <ToolbarItem />
-    </ContentPage.ToolbarItems>-->
+     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout"/>
+        <ToolbarItem Text="Info"/>
+    </ContentPage.ToolbarItems>
 
     <StackLayout Orientation="Horizontal">
 
