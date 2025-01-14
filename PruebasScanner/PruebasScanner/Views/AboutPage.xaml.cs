@@ -157,8 +157,6 @@ namespace PruebasScanner.Views
 
         async void btnPrinter_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Token", token, "ok");
-            return;
 
             /*btnScan.IsVisible = false;
             btnPrinter.IsVisible = false;*/
